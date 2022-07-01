@@ -9,6 +9,7 @@ import 'package:weatherapp/humidity.dart';
 import 'package:weatherapp/temp.dart';
 import 'package:sizer/sizer.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -76,6 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
   DatabaseReference refs = FirebaseDatabase.instance.ref();
   StreamSubscription? listener;
 
+
+
   @override
   void initState() {
     super.initState();
@@ -92,7 +95,12 @@ class _MyHomePageState extends State<MyHomePage> {
         aqi_1 = aqi1;
         temperature_1 = temp1;
         humidity_1 = humidity1;
-      });
+      }
+      );
+
+
+
+
 
 
       int aqi2 =
@@ -135,13 +143,15 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             
         children: [
+
           const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.blue,
+              image: DecorationImage(image: AssetImage("assets/images/VIT2.png")),
 
             ),
             child: Text(
-              '⛅',
+              '',
               textAlign: TextAlign.center,
               textScaleFactor: 2.2,
               style: TextStyle(height: 3, fontSize: 24),
@@ -263,6 +273,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void dispose() {
+
     super.dispose();
     listener?.cancel();
   }
