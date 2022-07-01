@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Colors.lightBlueAccent,
               image: DecorationImage(image: AssetImage("assets/images/VIT2.png")),
 
             ),
