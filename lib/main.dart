@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ),
             child: Text(
-              '⛅',
+              '⛅⛅',
               textAlign: TextAlign.center,
               textScaleFactor: 2.2,
               style: TextStyle(height: 3, fontSize: 24),
