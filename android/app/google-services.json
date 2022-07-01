@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "90519129854",
+    "firebase_url": "https://solid-justice-309213-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "solid-justice-309213",
+    "storage_bucket": "solid-justice-309213.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90519129854:android:664f351b262a23d52f5faf",
+        "android_client_info": {
+          "package_name": "com.example.weatherapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90519129854-4nj5d9cdf0qloge58fh9ngk5gj9ui665.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDParV_61PuKJZax32dEj-BM2mPMO9WZZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90519129854-4nj5d9cdf0qloge58fh9ngk5gj9ui665.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
