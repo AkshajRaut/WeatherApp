@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>90519129854-efsgns84ht0dgucscs5ktlvoh0q56ubl.apps.googleusercontent.com</string>
+	<string>90519129854-9hr43p1orrni85atb4j5e614u46f8rh5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.90519129854-efsgns84ht0dgucscs5ktlvoh0q56ubl</string>
+	<string>com.googleusercontent.apps.90519129854-9hr43p1orrni85atb4j5e614u46f8rh5</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAWn5f3Ad1wFMLpyzDFZ9-ZIarBKjrZCQg</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.weatherapp</string>
+	<string>com.vidyalankar.weatherapp</string>
 	<key>PROJECT_ID</key>
 	<string>solid-justice-309213</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:90519129854:ios:521bb0d4145b73d12f5faf</string>
+	<string>1:90519129854:ios:9d47be9ed0ab736e2f5faf</string>
 	<key>DATABASE_URL</key>
 	<string>https://solid-justice-309213-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
