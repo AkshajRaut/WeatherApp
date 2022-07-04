@@ -108,7 +108,9 @@ class _MyHomePageState extends State<MyHomePage> {
       double temp2 =
           double.parse(event.snapshot.child('station2/temp2').value.toString());
       double humidity2 = double.parse(
-          event.snapshot.child('station2/humidity2').value.toString());
+          event.snapshot.child('station2/humidity2').value.toString()).roundToDouble();
+
+
 
       setState(() => aqi_2 = aqi2);
       setState(() => temperature_2 = temp2);
@@ -223,7 +225,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ),
             Text(
-              avg_temperature.toString() + " °C",
+              avg_temperature.toStringAsFixed(2) + " °C",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 30),
             ), // Image.asset
@@ -242,7 +244,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
       ),
             Text(
-              avg_humidity.toString() + " %",
+              avg_humidity.toStringAsFixed(2) + " %",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 30),
             ),
@@ -261,7 +263,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
       ),
             Text(
-              avg_aqi.toString(),
+              avg_aqi.toStringAsFixed(2),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 30),
             )

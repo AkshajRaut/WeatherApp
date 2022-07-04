@@ -100,7 +100,7 @@ class _TemperatureState extends State<Temperature> {
                           annotations: <GaugeAnnotation>[
                             GaugeAnnotation(
                                 widget: Container(
-                                    child: Text(temperature_1.toString() +
+                                    child: Text(temperature_1.toStringAsFixed(2) +
                                         " °C",
                                         style: TextStyle(
                                             fontSize: 18,
@@ -146,7 +146,7 @@ class _TemperatureState extends State<Temperature> {
                           annotations: <GaugeAnnotation>[
                             GaugeAnnotation(
                                 widget: Container(
-                                    child: Text(temperature_2.toString() +
+                                    child: Text(temperature_2.toStringAsFixed(2) +
                                         " °C",
                                         style: TextStyle(
                                             fontSize: 18,

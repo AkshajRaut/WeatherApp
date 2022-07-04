@@ -98,7 +98,7 @@ class _AirQualityState extends State<AirQuality> {
                           annotations: <GaugeAnnotation>[
                             GaugeAnnotation(
                                 widget: Container(
-                                    child: Text(aqi_1.toString(),
+                                    child: Text(aqi_1.toStringAsFixed(2),
                                         style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold))),
@@ -146,7 +146,7 @@ class _AirQualityState extends State<AirQuality> {
                           annotations: <GaugeAnnotation>[
                             GaugeAnnotation(
                                 widget: Container(
-                                    child: Text(aqi_2.toString(),
+                                    child: Text(aqi_2.toStringAsFixed(2),
                                         style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold))),

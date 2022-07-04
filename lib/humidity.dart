@@ -83,7 +83,7 @@ class _HumidityState extends State<Humidity> {
                     ], annotations: <GaugeAnnotation>[
                       GaugeAnnotation(
                           widget: Container(
-                              child: Text(humidity_1.toString() + " %",
+                              child: Text(humidity_1.toStringAsFixed(2) + " %",
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold))),
@@ -121,7 +121,7 @@ class _HumidityState extends State<Humidity> {
                     ], annotations: <GaugeAnnotation>[
                       GaugeAnnotation(
                           widget: Container(
-                              child: Text(humidity_2.toString() + " %",
+                              child: Text(humidity_2.toStringAsFixed(2) + " %",
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold))),
