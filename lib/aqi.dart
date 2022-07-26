@@ -13,6 +13,10 @@ class AirQuality extends StatefulWidget {
 class _AirQualityState extends State<AirQuality> {
   double aqi_1 = 0;
   double aqi_2 = 0;
+  String stat_aqi_1 = '';
+  String stat_aqi_2 = '';
+  Color color_aqi_1 = Colors.black;
+  Color color_aqi_2 = Colors.black;
   DatabaseReference refs = FirebaseDatabase.instance.ref();
 
   void initState() {
@@ -23,6 +27,28 @@ class _AirQualityState extends State<AirQuality> {
           double.parse(event.snapshot.child('station1/aqi1').value.toString());
       double aqi2 =
           double.parse(event.snapshot.child('station2/aqi2').value.toString());
+      if(aqi_1>0 && aqi_1<=75){
+        setState((){stat_aqi_1="Good";
+          color_aqi_1=Colors.green;});
+      } else if (aqi_1>75 && aqi_1<=150){
+        setState((){stat_aqi_1="Moderate";
+        color_aqi_1=Colors.orange;});
+      } else if (aqi_1>150 && aqi_1<=300){
+        setState((){stat_aqi_1="Unhealthy";
+        color_aqi_1=Colors.red;});
+      }
+      if(aqi_2>0 && aqi_2<=75){
+        setState((){stat_aqi_2="Good";
+        color_aqi_2=Colors.green;});
+      } else if (aqi_2>75 && aqi_2<=150){
+        setState((){stat_aqi_2="Moderate";
+        color_aqi_2=Colors.orange;});
+      } else if (aqi_2>150 && aqi_2<=300){
+        setState((){stat_aqi_2="Good";
+        color_aqi_2=Colors.red;});
+      }
+
+
 
       setState(() {
         aqi_1 = aqi1;
@@ -98,12 +124,21 @@ class _AirQualityState extends State<AirQuality> {
                           annotations: <GaugeAnnotation>[
                             GaugeAnnotation(
                                 widget: Container(
-                                    child: Text(aqi_1.toStringAsFixed(2),
+                                    child: Text(stat_aqi_1,
                                         style: TextStyle(
+                                          color: color_aqi_1,
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold))),
-                                angle: 80,
-                                positionFactor: 0.4)
+                                angle: 85,
+                                positionFactor: 0.4),
+                            GaugeAnnotation(
+                                widget: Container(
+                                        child: Text(aqi_1.toStringAsFixed(2),
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold))),
+                                angle: 85,
+                                positionFactor: 0.6)
                           ])
                     ]),
               ),
@@ -146,12 +181,21 @@ class _AirQualityState extends State<AirQuality> {
                           annotations: <GaugeAnnotation>[
                             GaugeAnnotation(
                                 widget: Container(
+                                    child: Text(stat_aqi_2,
+                                        style: TextStyle(
+                                          color: color_aqi_2,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold))),
+                                angle: 85,
+                                positionFactor: 0.4),
+                            GaugeAnnotation(
+                                widget: Container(
                                     child: Text(aqi_2.toStringAsFixed(2),
                                         style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold))),
-                                angle: 80,
-                                positionFactor: 0.4)
+                                angle: 85,
+                                positionFactor: 0.6)
                           ])
                     ]),
               ),
